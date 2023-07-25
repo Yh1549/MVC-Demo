@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane prefHeight="758.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailyaccountapplication.controller.HomeController">
+    <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" />
+     <TextField fx:id="outcomeInput" layoutX="30.0" layoutY="178.0" />
+     <Label fx:id="balance" layoutX="64.0" layoutY="42.0" prefHeight="18.0" prefWidth="127.0" />
+   <Label fx:id="outcome" layoutX="30.0" layoutY="87.0" prefHeight="18.0" prefWidth="151.0" />
+   <Label fx:id="income" layoutX="30.0" layoutY="131.0" prefHeight="18.0" prefWidth="151.0" />
+   <Label fx:id="accountDate" layoutX="30.0" layoutY="23.0" prefHeight="18.0" prefWidth="127.0" text="日期:" />
+   <Label layoutX="30.0" layoutY="149.0" prefHeight="18.0" prefWidth="151.0" text="新增今日支出:" />
+   <TextField fx:id="incomeInput" layoutX="233.0" layoutY="178.0" />
+   <Label layoutX="237.0" layoutY="149.0" prefHeight="18.0" prefWidth="151.0" text="新增今日收入:" />
+   <Label layoutX="30.0" layoutY="68.0" prefHeight="18.0" prefWidth="151.0" text="支出:" />
+   <Label layoutX="30.0" layoutY="112.0" prefHeight="18.0" prefWidth="151.0" text="支出:" />
+   <Label layoutX="30.0" layoutY="42.0" prefHeight="18.0" prefWidth="30.0" text="結餘:" />
+   <StackPane layoutX="128.0" layoutY="491.0" prefHeight="150.0" prefWidth="200.0">
+      <children>
+           <Button onAction="#saveSingleAccount" prefHeight="79.0" prefWidth="0.0" text="+" StackPane.alignment="CENTER">
+            <graphic>
+               <Circle fill="DODGERBLUE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            </graphic>
+         </Button>
+      </children>
+   </StackPane>
+</AnchorPane>
