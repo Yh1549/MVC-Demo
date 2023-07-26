@@ -8,7 +8,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class App extends Application {
-    @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(App.class.getResource("view/Home.fxml"));
         var scene = new Scene(loader.load());
