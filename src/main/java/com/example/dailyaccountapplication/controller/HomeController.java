@@ -35,11 +35,7 @@ public class HomeController {
             double outcomeValue = Double.parseDouble(outcomeInput.getText());
             newAcct = new SingleAccount(incomeValue, outcomeValue);
             dailyAcct.addAcct(newAcct);
-//            income.setText(incomeInput.getText());
-//            outcome.setText(outcomeInput.getText());
-//            balance.setText(newAcct.getBalance());
             dailyAccount.setText(String.valueOf(dailyAcct.getDailyBalance()));
-//            SingleAccountDAO.saveAccount(newAcct);
             singleAccountDAO = new SingleAccountDAO();
             singleAccountDAO.saveAccount(newAcct);
         } else {

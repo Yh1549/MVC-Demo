@@ -10,24 +10,24 @@ import javafx.stage.Stage;
 
 public class App extends Application {
     public void start(Stage stage) throws Exception {
-        LoadingScene loading = new LoadingScene();
-        stage.setScene(loading.startLoading());
-        stage.show();
+//        LoadingScene loading = new LoadingScene();
+//        stage.setScene(loading.startLoading());
+//        stage.show();
 
-        InitDBService.initDB();
-
-        FXMLLoader loadingLoader = new FXMLLoader(App.class.getResource("view/Loading.fxml"));
+//        FXMLLoader loadingLoader = new FXMLLoader(App.class.getResource("view/Loading.fxml"));
         FXMLLoader loader = new FXMLLoader(App.class.getResource("view/Home.fxml"));
         var homeScene = new Scene(loader.load());
-        var LoadingScene = new Scene(loadingLoader.load());
+//        var LoadingScene = new Scene(loadingLoader.load());
 //        scene.getStylesheets().add(App.class.getResource("view/Home.css").toExternalForm());
         Image icon = new Image(App.class.getResource("img/icon.png").toExternalForm());
         stage.getIcons().add(icon);
         stage.setTitle("stage!!demo!@!");
-        stage.setScene(LoadingScene);
+        stage.setScene(homeScene);
         stage.show();
     }
     public static void main(String[] args) {
+        InitDBService.initDB();
         Application.launch();
+
     }
 }
