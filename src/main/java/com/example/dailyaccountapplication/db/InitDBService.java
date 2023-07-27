@@ -10,20 +10,20 @@ public class InitDBService {
 
     public static void initDB() {
         File file = new File(DBConnection.DB_ADDR);
-        if(!file.exists()){
+        if (!file.exists()) {
             try {
                 stmt = DBConnection.startConnection().createStatement();
                 stmt.executeUpdate(initSql);
             } catch (SQLException e) {
                 System.out.print("initialize failed");
-            }finally {
-                try{
+            } finally {
+                try {
                     stmt.close();
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
             }
-        }else{
+        } else {
             System.out.print("database already exist");
         }
     }

@@ -8,6 +8,7 @@ public class DBConnection {
     public static final String DB_URL = "jdbc:sqlite:database.db";
     public static final String DB_ADDR = "database.db";
     private static Connection conn;
+
     public static Connection startConnection() {
         try {
             if (conn == null) {
@@ -19,6 +20,7 @@ public class DBConnection {
         }
         return conn;
     }
+
     public static void closeConnection() {
         try {
             if (conn != null) {
