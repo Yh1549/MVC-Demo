@@ -11,6 +11,10 @@ public class DailyAccount implements Account {
     private double dailyBalance = 0;
     private ArrayList<SingleAccount> singleAccounts = new ArrayList<>();
 
+    public DailyAccount(){
+            //select localDate account
+    }
+
     public void addAcct(SingleAccount acct) {
         singleAccounts.add(acct);
         this.dailyIncome += singleAccounts.get(singleAccounts.size() - 1).getIncome();

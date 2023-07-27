@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class InitDBService {
-    private static final String initSql = "CREATE TABLE ACCOUNT (accid varchar(10) DEFAULT NULL, INCOME VARCHAR(45) DEFAULT NULL, OUTCOME VARCHAR(45) DEFAULT NULL, BALANCE VARCHAR(45) DEFAULT NULL)";
+    private static final String initSql = "CREATE TABLE ACCOUNT (DATE varchar(20) DEFAULT NULL, INCOME VARCHAR(45) DEFAULT NULL, OUTCOME VARCHAR(45) DEFAULT NULL, BALANCE VARCHAR(45) DEFAULT NULL)";
     private static Statement stmt = null;
 
     public static void initDB() {
@@ -20,6 +20,7 @@ public class InitDBService {
                 try {
                     stmt.close();
                 } catch (SQLException e) {
+                    System.out.print("close failed");
                     throw new RuntimeException(e);
                 }
             }
