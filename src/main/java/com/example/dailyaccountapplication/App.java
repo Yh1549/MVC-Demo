@@ -16,14 +16,15 @@ public class App extends Application {
 
         InitDBService.initDB();
 
-
+        FXMLLoader loadingLoader = new FXMLLoader(App.class.getResource("view/Loading.fxml"));
         FXMLLoader loader = new FXMLLoader(App.class.getResource("view/Home.fxml"));
         var homeScene = new Scene(loader.load());
+        var LoadingScene = new Scene(loadingLoader.load());
 //        scene.getStylesheets().add(App.class.getResource("view/Home.css").toExternalForm());
         Image icon = new Image(App.class.getResource("img/icon.png").toExternalForm());
         stage.getIcons().add(icon);
         stage.setTitle("stage!!demo!@!");
-        stage.setScene(homeScene);
+        stage.setScene(LoadingScene);
         stage.show();
     }
     public static void main(String[] args) {
