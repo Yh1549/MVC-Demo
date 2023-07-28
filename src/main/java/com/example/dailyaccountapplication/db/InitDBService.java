@@ -15,17 +15,17 @@ public class InitDBService {
                 stmt = DBConnection.startConnection().createStatement();
                 stmt.executeUpdate(initSql);
             } catch (SQLException e) {
-                System.out.print("initialize failed");
+                System.out.println("initialize failed");
             } finally {
                 try {
                     stmt.close();
                 } catch (SQLException e) {
-                    System.out.print("close failed");
+                    System.out.println("close failed");
                     throw new RuntimeException(e);
                 }
             }
         } else {
-            System.out.print("database already exist");
+            System.out.println("database already exist");
         }
     }
 }

@@ -2,6 +2,7 @@ package com.example.dailyaccountapplication.model;
 
 import com.example.dailyaccountapplication.core.Account;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 //model for daily calculate
@@ -9,10 +10,16 @@ public class DailyAccount implements Account {
     private double dailyIncome = 0;
     private double dailyOutcome = 0;
     private double dailyBalance = 0;
-    private ArrayList<SingleAccount> singleAccounts = new ArrayList<>();
+    private LocalDate localDate;
+    private ArrayList<SingleAccount> singleAccounts;
 
     public DailyAccount(){
-            //select localDate account
+        this.singleAccounts = new ArrayList<>();
+        this.localDate = LocalDate.now();
+    }
+    public DailyAccount(ArrayList<SingleAccount> list){
+        this.singleAccounts = list;
+        this.localDate = LocalDate.now();
     }
 
     public void addAcct(SingleAccount acct) {
@@ -36,5 +43,8 @@ public class DailyAccount implements Account {
 
     public double getDailyOutcome() {
         return dailyOutcome;
+    }
+    public LocalDate getLocalDate(){
+        return this.localDate;
     }
 }

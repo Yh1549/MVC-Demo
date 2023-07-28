@@ -8,7 +8,6 @@ import java.sql.SQLException;
 
 public class SingleAccountDAO {
     private static final String INSERT_SINGLE_ACCT = "INSERT INTO ACCOUNT(DATE,INCOME,OUTCOME,BALANCE) VALUES(?,?,?,?)";
-    private static final String SELECT_DAILY_ACCT = "SELECT * FROM ACCOUNT WHERE DATE = ?";
     private PreparedStatement stmt;
 
     //    private Connection con = DBConnection.startConnection();

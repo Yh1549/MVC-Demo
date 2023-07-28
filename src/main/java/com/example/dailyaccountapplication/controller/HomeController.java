@@ -7,6 +7,7 @@ import com.example.dailyaccountapplication.model.DailyAccount;
 import com.example.dailyaccountapplication.model.SingleAccount;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class HomeController {
@@ -22,13 +23,21 @@ public class HomeController {
     private Label outcome;
     @FXML
     private Label dailyAccount;
-
+    @FXML
+    private TableView<SingleAccount> accountTable;
+    @FXML
+    public void initialize(){
+        System.out.println("init...");
+        System.out.println("init finished");
+    }
     private SingleAccountDAO singleAccountDAO;
     private SingleAccount newAcct;
     private DailyAccount dailyAcct = new DailyAccount();
 //    private SingleAccountDAO singleAccountDAO;
 
-
+    public void accountTableRender(){
+//        accountTable.getColumns()
+    }
     public void saveSingleAccount() {
         if (ValidationTool.inputIsNumeric(incomeInput.getText()) && ValidationTool.inputIsNumeric(outcomeInput.getText())) {
             double incomeValue = Double.parseDouble(incomeInput.getText());

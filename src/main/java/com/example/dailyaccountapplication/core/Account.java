@@ -8,5 +8,4 @@ public interface Account {
        return in - out;
      };
 
-
 }
